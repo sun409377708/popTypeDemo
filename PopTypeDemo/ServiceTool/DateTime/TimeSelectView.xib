@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dXW-jI-J4L" customClass="TimeSelectView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vyh-ba-gfW">
+                    <rect key="frame" x="15" y="13" width="65.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnl-03-zaP">
+                    <rect key="frame" x="278" y="7" width="77" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="上午00:00">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="上午00:00">
+                        <color key="titleColor" red="0.019607843137254902" green="0.3411764705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="timeButtonClick:" destination="dXW-jI-J4L" eventType="touchUpInside" id="AZu-wu-7p8"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYc-5C-6kQ" userLabel="lineView">
+                    <rect key="frame" x="0.0" y="42" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="gzt-QM-0gM"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZN-sx-ge1" userLabel="lineView">
+                    <rect key="frame" x="0.0" y="152.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="63g-fX-oqO"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="结束时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0S-lo-FG2">
+                    <rect key="frame" x="15" y="166" width="65.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uI0-MQ-PGJ">
+                    <rect key="frame" x="278" y="159.5" width="77" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="下午00:00">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="selected" title="下午00:00">
+                        <color key="titleColor" red="0.019607843137254902" green="0.3411764705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="timeButtonClick:" destination="dXW-jI-J4L" eventType="touchUpInside" id="3Jq-dS-AUb"/>
+                    </connections>
+                </button>
+                <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jZo-cs-TCj">
+                    <rect key="frame" x="0.0" y="43" width="375" height="110"/>
+                    <date key="date" timeIntervalSinceReferenceDate="538538207.31157506">
+                        <!--2018-01-25 01:56:47 +0000-->
+                    </date>
+                    <locale key="locale" localeIdentifier="zh-Hans"/>
+                    <connections>
+                        <action selector="timeChange:" destination="dXW-jI-J4L" eventType="valueChanged" id="e8B-49-5MI"/>
+                    </connections>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xCW-mm-JMw" firstAttribute="trailing" secondItem="Wnl-03-zaP" secondAttribute="trailing" constant="20" id="Dyq-Z1-8P9"/>
+                <constraint firstItem="uI0-MQ-PGJ" firstAttribute="centerY" secondItem="t0S-lo-FG2" secondAttribute="centerY" id="Eys-fY-L3E"/>
+                <constraint firstAttribute="trailing" secondItem="FZN-sx-ge1" secondAttribute="trailing" id="F7u-RO-xsB"/>
+                <constraint firstItem="VYc-5C-6kQ" firstAttribute="top" secondItem="dXW-jI-J4L" secondAttribute="top" constant="42" id="OdT-Ym-Dbm"/>
+                <constraint firstItem="VYc-5C-6kQ" firstAttribute="leading" secondItem="dXW-jI-J4L" secondAttribute="leading" id="QgV-q1-V1d"/>
+                <constraint firstItem="jZo-cs-TCj" firstAttribute="leading" secondItem="xCW-mm-JMw" secondAttribute="leading" id="Wf0-R1-m02"/>
+                <constraint firstItem="FZN-sx-ge1" firstAttribute="leading" secondItem="dXW-jI-J4L" secondAttribute="leading" id="XYz-6n-NFf"/>
+                <constraint firstItem="t0S-lo-FG2" firstAttribute="leading" secondItem="Vyh-ba-gfW" secondAttribute="leading" id="YF9-C9-dIP"/>
+                <constraint firstItem="jZo-cs-TCj" firstAttribute="top" secondItem="VYc-5C-6kQ" secondAttribute="bottom" id="ZAK-M3-Mq8"/>
+                <constraint firstItem="FZN-sx-ge1" firstAttribute="top" secondItem="jZo-cs-TCj" secondAttribute="bottom" id="bMv-a3-25Q"/>
+                <constraint firstItem="Wnl-03-zaP" firstAttribute="centerY" secondItem="Vyh-ba-gfW" secondAttribute="centerY" id="eej-1C-Gch"/>
+                <constraint firstItem="Vyh-ba-gfW" firstAttribute="leading" secondItem="xCW-mm-JMw" secondAttribute="leading" constant="15" id="nF2-vI-uqU"/>
+                <constraint firstItem="t0S-lo-FG2" firstAttribute="top" secondItem="FZN-sx-ge1" secondAttribute="bottom" constant="13" id="o5V-Jc-e5w"/>
+                <constraint firstItem="xCW-mm-JMw" firstAttribute="trailing" secondItem="jZo-cs-TCj" secondAttribute="trailing" id="ow1-77-4pN"/>
+                <constraint firstItem="uI0-MQ-PGJ" firstAttribute="trailing" secondItem="Wnl-03-zaP" secondAttribute="trailing" id="rW8-HM-L1k"/>
+                <constraint firstItem="Vyh-ba-gfW" firstAttribute="top" secondItem="xCW-mm-JMw" secondAttribute="top" constant="13" id="s0U-PW-RE4"/>
+                <constraint firstItem="FZN-sx-ge1" firstAttribute="top" secondItem="VYc-5C-6kQ" secondAttribute="bottom" constant="110" id="u6f-kA-MCt"/>
+                <constraint firstAttribute="trailing" secondItem="VYc-5C-6kQ" secondAttribute="trailing" id="y98-qB-XVq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="xCW-mm-JMw"/>
+            <connections>
+                <outlet property="dateTimePicker" destination="jZo-cs-TCj" id="E3K-cc-Osd"/>
+                <outlet property="endTimeButton" destination="uI0-MQ-PGJ" id="RfH-YW-LVX"/>
+                <outlet property="startTimeButton" destination="Wnl-03-zaP" id="Vpe-VH-XTM"/>
+            </connections>
+            <point key="canvasLocation" x="44.5" y="148"/>
+        </view>
+    </objects>
+</document>
